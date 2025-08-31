@@ -26,11 +26,23 @@
             display: flex;
             justify-content: center;
             gap: 20px;
+            /* Added for mobile responsiveness */
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 10px;
+            white-space: nowrap;
+        }
+        header nav::-webkit-scrollbar {
+            display: none;
         }
         header nav a {
             color: #fff;
             text-decoration: none;
             font-weight: bold;
+            padding: 5px 10px;
+            /* Adjusted for better spacing on mobile */
+            flex-shrink: 0;
         }
         .hero {
             background: linear-gradient(rgba(53, 122, 189, 0.7), rgba(53, 122, 189, 0.7)), url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
@@ -184,10 +196,10 @@
 <header>
     <nav>
         <a href="#about">소개</a>
-        <a href="#services">진료과목</a>
-        <a href="#custom-clinic">맞춤 관리 클리닉</a>
-        <a href="#hours">진료시간</a>
-        <a href="#location">오시는 길</a>
+        <a href="#services">진료<br>과목</a>
+        <a href="#custom-clinic">맞춤관리<br>클리닉</a>
+        <a href="#hours">진료<br>시간</a>
+        <a href="#location">오시는<br>길</a>
         <a href="#contact">문의</a>
     </nav>
 </header>
