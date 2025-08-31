@@ -78,22 +78,51 @@
         .card h3 {
             color: #4A90E2;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .hours-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .hours-item {
+            display: flex;
+            align-items: center;
             background: #fff;
+            padding: 15px 20px;
             border-radius: 10px;
-            overflow: hidden;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        table th, table td {
-            padding: 12px;
+        .hours-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+        .hours-icon {
+            font-size: 2rem;
+            color: #357ABD;
+            margin-right: 20px;
+            width: 40px;
             text-align: center;
-            border-bottom: 1px solid #ddd;
         }
-        table th {
-            background: #4A90E2;
-            color: #fff;
+        .hours-content {
+            flex-grow: 1;
+        }
+        .hours-content h3 {
+            margin: 0;
+            color: #357ABD;
+            font-size: 1.2rem;
+        }
+        .hours-content p {
+            margin: 5px 0 0;
+            color: #555;
+            font-weight: bold; /* 진료 시간 강조 */
+        }
+        .lunch-break {
+            color: #888; /* 조금 더 진한 회색 */
+            font-size: 0.9em;
+            font-weight: bold; /* 글씨 진하게 */
+        }
+        .hours-holiday {
+            color: #d9534f;
         }
         .map iframe {
             width: 100%;
@@ -108,6 +137,14 @@
             text-align: center;
             padding: 15px 0;
             margin-top: 40px;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            .hero p {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -148,16 +185,29 @@
 
 <div class="container" id="hours">
     <h2>진료 시간</h2>
-    <table>
-        <tr><th>요일</th><th>시간</th></tr>
-        <tr><td>월</td><td>09:00 - 18:30 (13:00 - 14:00 점심 시간)</td></tr>
-        <tr><td>화</td><td>09:00 - 18:30 (13:00 - 14:00 점심 시간)</td></tr>
-        <tr><td>수</td><td>09:00 - 13:00</td></tr>
-        <tr><td>목</td><td>09:00 - 18:30 (13:00 - 14:00 점심 시간)</td></tr>
-        <tr><td>금</td><td>09:00 - 18:30 (13:00 - 14:00 점심 시간)</td></tr>
-        <tr><td>토</td><td>09:00 - 13:00</td></tr>
-        <tr><td>일/공휴일</td><td>휴진</td></tr>
-    </table>
+    <div class="hours-container">
+        <div class="hours-item">
+            <div class="hours-icon"><i class="fas fa-user-md"></i></div>
+            <div class="hours-content">
+                <h3>평일 진료 (월, 화, 목, 금)</h3>
+                <p>09:00 - 18:30<br><span class="lunch-break">(점심 시간: 13:00 - 14:00)</span></p>
+            </div>
+        </div>
+        <div class="hours-item">
+            <div class="hours-icon"><i class="fas fa-clock"></i></div>
+            <div class="hours-content">
+                <h3>단축 진료 (수, 토)</h3>
+                <p>09:00 - 13:00</p>
+            </div>
+        </div>
+        <div class="hours-item">
+            <div class="hours-icon"><i class="fas fa-calendar-times"></i></div>
+            <div class="hours-content">
+                <h3 class="hours-holiday">휴진 (일요일, 공휴일)</h3>
+                <p>진료가 없습니다</p>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="container" id="location">
