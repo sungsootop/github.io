@@ -164,20 +164,20 @@
         }
 
         /* Main Content */
-        .main-content {
-            background: #f8fafc;
-            position: relative;
-            z-index: 1;
-            margin-top: -100px;
-            padding-top: 100px;
-            border-radius: 50px 50px 0 0;
-            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .container {
+        .main-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 20px;
+            position: relative;
+            z-index: 1;
+            padding: 0 20px; /* 컨테이너 좌우 패딩 추가 */
+        }
+        
+        .main-content {
+            background: #f8fafc;
+            border-radius: 50px 50px 0 0;
+            box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+            padding-top: 100px;
+            margin-top: -100px;
         }
 
         .section-title {
@@ -518,111 +518,114 @@
         </div>
     </section>
 
-    <div class="main-content">
-        <!-- 공지사항 섹션 -->
-        <div class="announcement fade-in">
-            <div class="announcement-content">
-                <h3>📢 공지</h3>
-                <p>
-                    "9월 독감 예방 접종" 시작 안내<br>
-                    "위고비, 마운자로" 입고
-                </p>
-            </div>
-        </div>
-
-        <div class="container fade-in" id="services">
-            <h2 class="section-title">진료 과목</h2>
-            <p class="section-subtitle">전문적이고 체계적인 진료 서비스를 제공합니다</p>
-            <div class="cards">
-                <div class="card"><i class="fas fa-heartbeat"></i><h3>내과</h3><p>고혈압, 당뇨병, 고지혈증, 통풍, 대사 질환, 수족냉증, 대상포진</p></div>
-                <div class="card"><i class="fas fa-lungs"></i><h3>호흡기/알레르기</h3><p>호흡기, 알레르기 질환</p></div>
-                <div class="card"><i class="fas fa-toilet"></i><h3>소화기/신장</h3><p>소화기, 신장 질환</p></div>
-                <div class="card"><i class="fas fa-x-ray"></i><h3>초음파 검사</h3><p>경동맥, 복부, 갑상선 등</p></div>
-                <div class="card"><i class="fas fa-vial"></i><h3>혈액 검사</h3><p>혈액 종합 검사</p></div>
-                <div class="card"><i class="fas fa-tint"></i><h3>수액 치료</h3><p>회복 및 영양 공급</p></div>
-                <div class="card"><i class="fas fa-syringe"></i><h3>예방 접종</h3><p>대상포진, 폐렴, A형/B형 간염, 백일해, 파상풍, 자궁경부암, 독감(인플루엔자) 등</p></div>
-                <div class="card"><i class="fas fa-weight"></i><h3>비만 상담</h3><p>체중 관리와 식이 상담 - 위고비, 마운자로</p></div>
-                <div class="card"><i class="fas fa-battery-full"></i><h3>피로 회복 클리닉</h3><p>만성 피로, 만성 염증, 번아웃, 스트레스</p></div>
-                <div class="card"><i class="fas fa-heart"></i><h3>간 건강 클리닉</h3><p>숙취 해소, 간 기능 개선</p></div>
-                <div class="card"><i class="fas fa-shield-virus"></i><h3>면역 관리 클리닉</h3><p>면역력 증진 프로그램</p></div>
-                <div class="card"><i class="fas fa-spa"></i><h3>웰니스 클리닉</h3><p>탈모, 피부톤 개선, 디톡스, 항노화</p></div>
-            </div>
-        </div>
-
-        <!-- 맞춤 관리 클리닉 섹션 -->
-        <div class="container custom-clinic-section fade-in" id="custom-clinic">
-            <h2 class="section-title">맞춤 관리 클리닉</h2>
-            <p class="section-subtitle">목표/체질/직업 패턴에 맞춰 개인화</p>
-            <div class="custom-clinic-cards">
-                <div class="card">
-                    <i class="fas fa-balance-scale"></i>
-                    <h3>체중 관리 패키지</h3>
+    <!-- 모든 컨텐츠를 감싸는 새로운 컨테이너 추가 -->
+    <div class="main-container">
+        <div class="main-content">
+            <!-- 공지사항 섹션 -->
+            <div class="announcement fade-in">
+                <div class="announcement-content">
+                    <h3>📢 공지</h3>
                     <p>
-                        상담 → 계획 → 주사 선택 → 4주 추적<br>
-                        기초 대사, 식습관 프로파일<br>
-                        위고비, 마운자로 적정화<br>
-                        부작용 최소화 가이드
-                    </p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-leaf"></i>
-                    <h3>피로 회복 & 면역</h3>
-                    <p>
-                        단건 또는 4/8/12회 코스<br>
-                        비타민/아미노산/종합영양/미량원소<br>
-                        항산화 (백옥/신데렐라)<br>
-                        스트레스 관리
-                    </p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>예방 접종 패키지</h3>
-                    <p>
-                        연령, 직업군별 권장 스케줄<br>
-                        기업 및 단체 접종 협의
+                        "9월 독감 예방 접종" 시작 안내<br>
+                        "위고비, 마운자로" 입고
                     </p>
                 </div>
             </div>
-        </div>
 
-        <div class="container fade-in" id="hours">
-            <h2 class="section-title">진료 시간</h2>
-            <div class="hours-container">
-                <div class="hours-item">
-                    <div class="hours-icon"><i class="fas fa-user-md"></i></div>
-                    <div class="hours-content">
-                        <h3>평일 진료 (월, 화, 목, 금)</h3>
-                        <p>09:00 - 18:30<br><span class="lunch-break">(점심 시간: 13:00 - 14:00)</span></p>
-                    </div>
+            <div class="container fade-in" id="services">
+                <h2 class="section-title">진료 과목</h2>
+                <p class="section-subtitle">전문적이고 체계적인 진료 서비스를 제공합니다</p>
+                <div class="cards">
+                    <div class="card"><i class="fas fa-heartbeat"></i><h3>내과</h3><p>고혈압, 당뇨병, 고지혈증, 통풍, 대사 질환, 수족냉증, 대상포진</p></div>
+                    <div class="card"><i class="fas fa-lungs"></i><h3>호흡기/알레르기</h3><p>호흡기, 알레르기 질환</p></div>
+                    <div class="card"><i class="fas fa-toilet"></i><h3>소화기/신장</h3><p>소화기, 신장 질환</p></div>
+                    <div class="card"><i class="fas fa-x-ray"></i><h3>초음파 검사</h3><p>경동맥, 복부, 갑상선 등</p></div>
+                    <div class="card"><i class="fas fa-vial"></i><h3>혈액 검사</h3><p>혈액 종합 검사</p></div>
+                    <div class="card"><i class="fas fa-tint"></i><h3>수액 치료</h3><p>회복 및 영양 공급</p></div>
+                    <div class="card"><i class="fas fa-syringe"></i><h3>예방 접종</h3><p>대상포진, 폐렴, A형/B형 간염, 백일해, 파상풍, 자궁경부암, 독감(인플루엔자) 등</p></div>
+                    <div class="card"><i class="fas fa-weight"></i><h3>비만 상담</h3><p>체중 관리와 식이 상담 - 위고비, 마운자로</p></div>
+                    <div class="card"><i class="fas fa-battery-full"></i><h3>피로 회복 클리닉</h3><p>만성 피로, 만성 염증, 번아웃, 스트레스</p></div>
+                    <div class="card"><i class="fas fa-heart"></i><h3>간 건강 클리닉</h3><p>숙취 해소, 간 기능 개선</p></div>
+                    <div class="card"><i class="fas fa-shield-virus"></i><h3>면역 관리 클리닉</h3><p>면역력 증진 프로그램</p></div>
+                    <div class="card"><i class="fas fa-spa"></i><h3>웰니스 클리닉</h3><p>탈모, 피부톤 개선, 디톡스, 항노화</p></div>
                 </div>
-                <div class="hours-item">
-                    <div class="hours-icon"><i class="fas fa-clock"></i></div>
-                    <div class="hours-content">
-                        <h3>오전 진료 (수, 토)</h3>
-                        <p>09:00 - 13:00</p>
+            </div>
+
+            <!-- 맞춤 관리 클리닉 섹션 -->
+            <div class="container custom-clinic-section fade-in" id="custom-clinic">
+                <h2 class="section-title">맞춤 관리 클리닉</h2>
+                <p class="section-subtitle">목표/체질/직업 패턴에 맞춰 개인화</p>
+                <div class="custom-clinic-cards">
+                    <div class="card">
+                        <i class="fas fa-balance-scale"></i>
+                        <h3>체중 관리 패키지</h3>
+                        <p>
+                            상담 → 주사 선택 → 4주 추적<br>
+                            기초 대사, 식습관 프로파일<br>
+                            위고비, 마운자로 적정화<br>
+                            부작용 최소화 가이드
+                        </p>
                     </div>
-                </div>
-                <div class="hours-item">
-                    <div class="hours-icon"><i class="fas fa-calendar-times"></i></div>
-                    <div class="hours-content">
-                        <h3 class="hours-holiday">휴진 (일요일, 공휴일)</h3>
-                        <p>진료가 없습니다</p>
+                    <div class="card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>피로 회복 & 면역</h3>
+                        <p>
+                            단건 또는 4/8/12회 코스<br>
+                            비타민/아미노산/종합영양/미량원소<br>
+                            항산화 (백옥/신데렐라)<br>
+                            스트레스 관리
+                        </p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>예방 접종 패키지</h3>
+                        <p>
+                            연령, 직업군별 권장 스케줄<br>
+                            기업 및 단체 접종 협의
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="container fade-in" id="location">
-            <h2 class="section-title">오시는 길</h2>
-            <p class="section-subtitle">서울 성동구 아차산로 92 에스타워 3층 303호</p>
-            <div class="map">
-                <iframe src="https://www.google.com/maps?q=서울%20성동구%20아차산로%2092&output=embed"></iframe>
+            <div class="container fade-in" id="hours">
+                <h2 class="section-title">진료 시간</h2>
+                <div class="hours-container">
+                    <div class="hours-item">
+                        <div class="hours-icon"><i class="fas fa-user-md"></i></div>
+                        <div class="hours-content">
+                            <h3>평일 진료 (월, 화, 목, 금)</h3>
+                            <p>09:00 - 18:30<br><span class="lunch-break">(점심 시간: 13:00 - 14:00)</span></p>
+                        </div>
+                    </div>
+                    <div class="hours-item">
+                        <div class="hours-icon"><i class="fas fa-clock"></i></div>
+                        <div class="hours-content">
+                            <h3>오전 진료 (수, 토)</h3>
+                            <p>09:00 - 13:00</p>
+                        </div>
+                    </div>
+                    <div class="hours-item">
+                        <div class="hours-icon"><i class="fas fa-calendar-times"></i></div>
+                        <div class="hours-content">
+                            <h3 class="hours-holiday">휴진 (일요일, 공휴일)</h3>
+                            <p>진료가 없습니다</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="container fade-in" id="contact">
-            <h2 class="section-title">문의</h2>
-            <p>대표 전화: <a href="tel:024661275">02-466-1275</a></p>
+            <div class="container fade-in" id="location">
+                <h2 class="section-title">오시는 길</h2>
+                <p class="section-subtitle">서울 성동구 아차산로 92 에스타워 3층 303호</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps?q=서울%20성동구%20아차산로%2092&output=embed"></iframe>
+                </div>
+            </div>
+
+            <div class="container fade-in" id="contact">
+                <h2 class="section-title">문의</h2>
+                <p>대표 전화: <a href="tel:024661275">02-466-1275</a></p>
+            </div>
         </div>
     </div>
 
