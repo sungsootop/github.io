@@ -32,6 +32,9 @@
             background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-light) 100%);
             min-height: 100vh;
             overflow-x: hidden;
+            /* 모바일 스크롤 개선을 위한 속성 */
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
         }
 
         /* 물방울 배경 효과 */
@@ -48,9 +51,9 @@
 
         .waterdrop {
             position: absolute;
+            /* 성능을 위해 블러 효과 제거 */
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
-            filter: blur(50px);
             animation: waterdrop-move 15s infinite ease-in-out;
             box-shadow: 0 0 50px rgba(255, 255, 255, 0.3);
         }
@@ -72,8 +75,8 @@
             top: 0;
             width: 100%;
             z-index: 1000;
-            backdrop-filter: blur(15px);
-            background: var(--glass-bg);
+            /* 성능을 위해 블러 효과 제거 */
+            background: rgba(255, 255, 255, 0.2);
             border-bottom: 1px solid var(--glass-border);
             padding: 15px 0;
             transition: all 0.3s ease;
@@ -101,7 +104,7 @@
             padding: 12px 20px;
             border-radius: 50px;
             transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            /* 성능을 위해 블러 효과 제거 */
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
             white-space: nowrap;
@@ -125,7 +128,7 @@
 
         /* Hero Section */
         .hero {
-            height: 80vh; /* 섹션 높이를 다시 늘림 */
+            height: 80vh;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -143,7 +146,7 @@
         }
         
         .hero h1 {
-            font-size: clamp(3rem, 10vw, 5rem); /* 글자 크기 더 크게 */
+            font-size: clamp(3rem, 10vw, 5rem);
             font-weight: 900;
             margin-bottom: 20px;
             text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -169,7 +172,7 @@
             margin: 0 auto;
             position: relative;
             z-index: 1;
-            padding: 0 20px; /* 컨테이너 좌우 패딩 추가 */
+            padding: 0 20px;
         }
         
         .main-content {
@@ -208,7 +211,6 @@
             position: relative;
             overflow: hidden;
             box-shadow: var(--shadow-strong);
-            backdrop-filter: blur(10px);
         }
 
         .announcement h3 {
@@ -218,8 +220,8 @@
         }
         
         .announcement p {
-            font-size: 1.25rem; /* 글자 크기 키우기 */
-            font-weight: 700;   /* 글자 진하게 */
+            font-size: 1.25rem;
+            font-weight: 700;
         }
         
         /* 카드 그리드 */
@@ -231,8 +233,7 @@
         }
 
         .card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 30px;
             text-align: center;
@@ -307,8 +308,8 @@
         .hours-item {
             display: flex;
             align-items: center;
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
+            /* 성능을 위해 블러 효과 제거 */
+            background: rgba(255, 255, 255, 0.1);
             padding: 25px;
             border-radius: 20px;
             border: 1px solid var(--glass-border);
@@ -323,7 +324,7 @@
 
         .hours-icon {
             font-size: 2.5rem;
-            background: linear-gradient(45deg, #444444, #333333); /* 진한 회색 계열로 변경 */
+            background: linear-gradient(45deg, #444444, #333333);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -387,7 +388,7 @@
         }
 
         #contact a:hover {
-            color: #e5e7eb; /* 마우스 오버 시 색상 변경 */
+            color: #e5e7eb;
         }
 
         /* Footer */
@@ -442,7 +443,7 @@
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.6s ease;
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
         .fade-in.visible {
@@ -634,6 +635,20 @@
     </footer>
 
     <script>
+        // 스로틀링 함수: 지정된 시간 동안 함수가 여러 번 호출되는 것을 막습니다.
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            }
+        }
+
         // 로딩 화면
         window.addEventListener('load', () => {
             const loading = document.getElementById('loading');
@@ -642,14 +657,14 @@
         });
 
         // 헤더 스크롤 효과
-        window.addEventListener('scroll', () => {
+        window.addEventListener('scroll', throttle(() => {
             const header = document.getElementById('header');
             if (window.scrollY > 100) {
                 header.classList.add('scrolled');
             } else {
                 header.classList.remove('scrolled');
             }
-        });
+        }, 100)); // 100ms마다 한 번만 실행
 
         // 부드러운 스크롤
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -680,7 +695,7 @@
 
         // 초기화
         animateOnScroll();
-        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('scroll', throttle(animateOnScroll, 100)); // 100ms마다 한 번만 실행
     </script>
 </body>
 </html>
