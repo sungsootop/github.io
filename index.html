@@ -4,11 +4,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="성수탑내과의원 - 내과 진료, 초음파 검사, 혈액검사, 예방접종, 체중·대사 관리">
-<title>성수탑내과의원</title>
+<meta name="description" content="성수역 내과 성수탑내과의원. 성수역 4번 출구 인근, 성인 내과 진료, 만성질환 관리, 혈액검사, 초음파 검사, 성인 예방접종 및 비만 상담을 안내합니다.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:title" content="성수역 내과 | 성수탑내과의원">
+<meta property="og:description" content="성수역 4번 출구 인근 성인 내과 진료. 만성질환 관리, 혈액검사, 초음파 검사, 예방접종 및 비만 상담 안내.">
+<title>성수역 내과 | 성수탑내과의원</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#173b5e;
@@ -25,7 +30,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{
-  font-family:Pretendard,"Noto Sans KR",sans-serif;
+  font-family:"Nanum Gothic","Malgun Gothic","맑은 고딕",sans-serif;
   color:var(--text); background:var(--bg); line-height:1.65;
   -webkit-font-smoothing:antialiased;
 }
@@ -63,6 +68,13 @@ nav a:hover{background:var(--sky);color:var(--blue)}
   box-shadow:0 18px 50px rgba(30,65,90,.09)
 }
 .hero-info h3{font-size:17px;color:var(--navy);margin-bottom:20px}
+
+.hero-info h3{display:flex;justify-content:space-between;align-items:center}
+.status-badge{font-size:12px;font-weight:800;padding:6px 10px;border-radius:999px;letter-spacing:.2px}
+.badge-open{background:#e6f4ea;color:#1a7a3a}
+.badge-lunch{background:#fff4e5;color:#9a5a00}
+.badge-closed{background:#fde8e8;color:#a33}
+
 .today{background:var(--sky);border-radius:15px;padding:17px;margin-bottom:18px}
 .today strong{display:block;font-size:14px;color:var(--blue);margin-bottom:4px}
 .today b{font-size:23px;color:var(--navy)}
@@ -179,20 +191,170 @@ footer{background:#142635;color:#9eafbc;text-align:center;padding:28px 20px;font
  footer{padding-bottom:72px}
 }
 
+
+/* 2026 리뉴얼: 본문 가독성, 지역 정보, 모바일 이용성 개선 */
+:root { --text:#1e2e3d; --muted:#526575; --line:#dce5eb; }
+html { scroll-padding-top: 88px; }
+body { font-size:18px; line-height:1.8; font-family:"Nanum Gothic","Malgun Gothic","맑은 고딕",sans-serif; }
+p { line-height:1.85; }
+.container { width:min(1160px,calc(100% - 48px)); }
+.logo { font-size:23px; }
+.logo small { font-size:12px; }
+nav a { font-size:16px; }
+.header-phone { font-size:16px; }
+.eyebrow { font-size:16px; }
+.hero h1 { font-size:clamp(42px,5vw,66px); line-height:1.22; letter-spacing:-1.7px; }
+.hero h1 span { font-size:.43em; line-height:1.5; }
+.hero-desc { font-size:20px; line-height:1.9; }
+.btn { min-height:50px; padding:14px 22px; font-size:17px; }
+.hero-info { padding:32px; }
+.hero-info h3 { font-size:20px; }
+.today strong { font-size:16px; }
+.today b { font-size:26px; }
+.info-row { font-size:17px; gap:14px; }
+section { padding:96px 0; }
+.section-kicker { font-size:15px; }
+.section-title { font-size:clamp(32px,3vw,40px); }
+.section-desc { font-size:18px; line-height:1.8; }
+.notice { padding:22px 26px; margin-bottom:64px; }
+.notice strong { font-size:18px; }
+.notice p { font-size:17px; line-height:1.9; }
+.quick-menu a { font-size:16px; min-height:54px; }
+.service { padding:28px 24px; min-height:190px; }
+.service-icon { font-size:30px; }
+.service h3 { font-size:20px; line-height:1.5; }
+.service p { font-size:16px; line-height:1.85; }
+.trust-item { padding:28px 22px; }
+.trust-item b { font-size:19px; }
+.trust-item span { font-size:16px; line-height:1.8; }
+.process-step { padding:24px; }
+.process-step .num { font-size:14px; }
+.process-step h3 { font-size:18px; line-height:1.55; }
+.process-step p { font-size:16px; line-height:1.85; }
+.check-card { padding:30px; }
+.check-card h3 { font-size:22px; }
+.check-card p { font-size:17px; line-height:1.9; }
+.clinic { padding:28px; }
+.clinic h3 { font-size:21px; line-height:1.5; }
+.clinic ul { font-size:16px; line-height:1.8; }
+.clinic li { padding:7px 0; }
+.hour { grid-template-columns:210px 1fr; padding:22px 28px; font-size:17px; }
+.address { padding:36px; }
+.address h3 { font-size:25px; }
+.address p { font-size:17px; line-height:1.9; }
+.address .phone { font-size:30px; }
+.route-note { color:#e4f2fa !important; margin:0 0 8px !important; }
+.btn-naver { background:#e8f6ee; color:#17683a; border:1px solid #c5e8d2; }
+.btn-naver:hover { background:#d9f0e3; }
+.map iframe { min-height:380px; }
+.contact-phone { font-size:clamp(38px,5vw,52px); }
+.contact-note { font-size:16px; }
+footer { font-size:14px; line-height:1.9; }
+footer p + p { margin-top:4px; }
+a:focus-visible, button:focus-visible { outline:3px solid #f1b84b; outline-offset:3px; }
+@media(max-width:900px) {
+  .container { width:min(100% - 36px,1160px); }
+  .hero-grid { gap:38px; }
+  .hero-info { padding:28px; }
+  .service-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .clinic-wrap { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media(max-width:600px) {
+  body { font-size:17px; line-height:1.8; }
+  .container { width:calc(100% - 32px); }
+  .header-inner { height:68px; }
+  .logo { font-size:19px; }
+  .logo small { font-size:10px; letter-spacing:1px; }
+  .header-phone { font-size:14px; padding:9px 12px !important; }
+  .hero { margin-top:68px; }
+  .hero-grid { padding:44px 0 62px; gap:28px; }
+  .hero h1 { font-size:clamp(36px,9vw,44px); letter-spacing:-1.5px; }
+  .hero h1 span { font-size:.46em; margin-top:12px; }
+  .hero-desc { font-size:18px; line-height:1.85; }
+  .eyebrow { font-size:14px; padding:8px 12px; }
+  .actions .btn { flex:1 1 auto; }
+  .hero-info { padding:22px; border-radius:22px; }
+  .hero-info h3 { font-size:19px; }
+  .today { padding:16px; }
+  .today strong { font-size:15px; }
+  .today b { font-size:23px; }
+  .info-row { font-size:16px; padding:13px 0; }
+  section { padding:70px 0; }
+  .section-head { margin-bottom:32px; }
+  .section-kicker { font-size:13px; }
+  .section-title { font-size:30px; letter-spacing:-.7px; }
+  .section-desc { font-size:17px; }
+  .quick-menu { grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; padding:10px; }
+  .quick-menu a { font-size:15px; padding:12px 8px; min-height:52px; }
+  .notice { margin-top:26px; margin-bottom:44px; padding:18px; }
+  .notice strong { font-size:17px; }
+  .notice p { font-size:16px; }
+  .service-grid,.check-grid,.clinic-wrap { grid-template-columns:1fr; }
+  .service { min-height:0; padding:23px; }
+  .service h3 { font-size:20px; }
+  .service p { font-size:16px; }
+  .trust { grid-template-columns:1fr; gap:12px; }
+  .trust-item { padding:22px 18px; }
+  .process { grid-template-columns:1fr; gap:12px; }
+  .process-step { padding:21px; }
+  .check-card { padding:23px; }
+  .check-card h3 { font-size:21px; }
+  .check-card p { font-size:16px; }
+  .clinic { padding:23px; }
+  .clinic h3 { font-size:20px; margin-bottom:10px; }
+  .clinic ul { font-size:16px; }
+  .hour { grid-template-columns:1fr; gap:5px; padding:17px 20px; font-size:16px; }
+  .address { padding:26px 22px; }
+  .address h3 { font-size:23px; }
+  .address p { font-size:16px; }
+  .address .phone { font-size:27px; }
+  .address .actions { display:grid; grid-template-columns:1fr; }
+  .map iframe { height:300px; min-height:300px; }
+  .contact-phone { font-size:38px; }
+  .contact-note { font-size:15px; }
+  .mobile-bar a { font-size:15px; padding:16px 10px; }
+  footer { font-size:13px; padding-bottom:82px; }
+}
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { scroll-behavior:auto !important; transition:none !important; } }
+
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "성수탑내과의원",
+  "url": "https://sungsootop.github.io/github.io/",
+  "telephone": "+82-2-466-1275",
+  "medicalSpecialty": "https://schema.org/PrimaryCare",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "아차산로 92, 에스타워 3층 303호",
+    "postalCode": "04781",
+    "addressLocality": "성동구",
+    "addressRegion": "서울특별시",
+    "addressCountry": "KR"
+  },
+  "hasMap": "https://map.naver.com/p/search/%EC%84%B1%EC%88%98%ED%83%91%EB%82%B4%EA%B3%BC%EC%9D%98%EC%9B%90",
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"09:00","closes":"13:00"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Thursday","Friday"],"opens":"14:00","closes":"18:30"},
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday","Saturday"],"opens":"09:00","closes":"13:00"}
+  ]
+}
+</script>
 </head>
 <body>
 
 <header>
   <div class="container header-inner">
     <a class="logo" href="#home">성수탑내과의원<small>SEONGSU TOP INTERNAL MEDICINE</small></a>
-    <nav>
+    <nav aria-label="주요 메뉴">
       <a href="#services">진료과목</a>
       <a href="#checks">검사</a>
       <a href="#clinic">맞춤관리</a>
       <a href="#hours">진료시간</a>
       <a href="#location">오시는 길</a>
-      <a class="header-phone" href="tel:024661275">02-466-1275</a>
+      <a class="header-phone" href="tel:02-466-1275">02-466-1275</a>
     </nav>
   </div>
 </header>
@@ -201,37 +363,41 @@ footer{background:#142635;color:#9eafbc;text-align:center;padding:28px 20px;font
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <div class="eyebrow">성수탑내과의원</div>
-      <h1>가까운 곳에서<br>꼼꼼한 내과 진료<span>일상 속 건강을 함께 관리합니다.</span></h1>
-      <p class="hero-desc">내과 진료부터 혈액검사, 초음파 검사, 예방접종, 체중·대사 관리까지 필요한 진료를 한 곳에서 상담받으실 수 있습니다.</p>
+      <div class="eyebrow">성수역 4번 출구 인근 · 도보 약 2분</div>
+      <h1>성수역 내과<br>성수탑내과의원<span>당신의 건강을 지켜 드립니다.</span></h1>
+      <p class="hero-desc">성인 내과 진료를 중심으로 고혈압·당뇨병 등 만성질환 관리, 혈액검사, 초음파 검사, 성인 예방접종 및 비만 상담을 안내합니다.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="tel:024661275">전화 상담</a>
+        <a class="btn btn-primary" href="tel:02-466-1275">전화 상담</a>
         <a class="btn btn-secondary" href="#location">오시는 길</a>
       </div>
     </div>
     <div class="hero-info">
-      <h3>진료시간 안내</h3>
-      <div class="today">
-        <strong>평일 진료 · 월 / 화 / 목 / 금</strong>
-        <b>09:00 – 18:30</b>
+      <h3>진료시간 안내 <span id="todayBadge" class="status-badge">확인중</span></h3>
+      <div class="today" id="todayBox">
+        <div>
+          <strong id="todayLabel">평일 진료 · 월 / 화 / 목 / 금</strong>
+          <b id="todayHours">09:00 – 18:30</b>
+        </div>
+        <i class="fa-regular fa-clock" style="font-size:22px;color:var(--blue);opacity:.7"></i>
       </div>
       <div class="info-row"><span>점심시간</span><span>13:00 – 14:00</span></div>
       <div class="info-row"><span>수요일 / 토요일</span><span>09:00 – 13:00</span></div>
       <div class="info-row"><span>일요일 / 공휴일</span><span>휴진</span></div>
+      <p style="margin-top:14px;font-size:14px;color:var(--muted);line-height:1.6"><i class="fa-solid fa-circle-info" style="color:var(--blue)"></i> 네이버지도에서 길찾기·저장하시면 주차 안내가 편해요.</p>
     </div>
   </div>
 </section>
 
-<div class="container" style="margin-top:-35px;position:relative;z-index:2">
+<div class="container" style="margin-top:-46px;position:relative;z-index:2">
   <div class="quick-menu">
-    <a href="tel:024661275">☎ 전화 상담</a>
+    <a href="tel:02-466-1275"><i class="fa-solid fa-phone"></i> 전화 상담</a>
     <a href="#services"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i> 진료과목</a>
-    <a href="#hours">🕘 진료시간</a>
-    <a href="#location">📍 오시는 길</a>
+    <a href="#hours"><i class="fa-regular fa-clock"></i> 진료시간</a>
+    <a href="#location"><i class="fa-solid fa-location-dot"></i> 오시는 길</a>
   </div>
   <div class="notice">
     <strong>공지 사항</strong>
-    <p>독감 예방접종 진행중 · 독감 및 코로나 신속 진단 검사 · 위고비/마운자로 전 용량 입고 완료 · 혈당 스파이크 진료 · 건강 검진 결과 상담</p>
+    <p>독감 예방접종 진행중 · 호흡기 신속 검사 · 체중·대사 맞춤 상담 · 건강검진 결과 상담 · 기업·단체 예방접종 협의</p>
   </div>
 </div>
 
@@ -243,14 +409,14 @@ footer{background:#142635;color:#9eafbc;text-align:center;padding:28px 20px;font
     <p class="section-desc">전문적이고 체계적인 진료 서비스를 제공합니다.</p>
   </div>
   <div class="service-grid">
-    <article class="service"><div class="service-icon"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></div><h3>내과</h3><p>고혈압, 당뇨병, 고지혈증, 통풍, 대사 질환, 수족냉증, 대상포진</p></article>
-    <article class="service"><div class="service-icon"><i class="fa-solid fa-lungs" aria-hidden="true"></i></div><h3>호흡기 · 알레르기</h3><p>호흡기 및 알레르기 질환</p></article>
-    <article class="service"><div class="service-icon"><i class="fa-solid fa-microscope" aria-hidden="true"></i></div><h3>소화기 · 신장</h3><p>소화기 및 신장 질환</p></article>
-    <article class="service"><div class="service-icon">🖥️</div><h3>초음파 검사</h3><p>경동맥, 복부, 갑상선 등</p></article>
+    <article class="service"><div class="service-icon"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></div><h3>성인 내과</h3><p>고혈압·당뇨병·이상지질혈증 등 만성질환과 통풍·대사질환 진료</p></article>
+    <article class="service"><div class="service-icon"><i class="fa-solid fa-lungs" aria-hidden="true"></i></div><h3>호흡기 · 알레르기</h3><p>기침·가래·인후통 등 호흡기 증상과 알레르기 관련 진료</p></article>
+    <article class="service"><div class="service-icon"><i class="fa-solid fa-microscope" aria-hidden="true"></i></div><h3>소화기 · 신장</h3><p>소화기 증상 및 신장기능 이상에 대한 평가와 상담</p></article>
+    <article class="service"><div class="service-icon"><i class="fa-solid fa-wave-square" aria-hidden="true"></i></div><h3>초음파 검사</h3><p>경동맥, 복부, 갑상선 등</p></article>
     <article class="service"><div class="service-icon"><i class="fa-solid fa-flask" aria-hidden="true"></i></div><h3>혈액 검사</h3><p>혈당 · 빈혈 · 갑상선 · 비타민 · 콜레스테롤 · 간 건강 · 염증 · 대사 건강 · 알레르기</p></article>
-    <article class="service"><div class="service-icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></div><h3>수액 치료</h3><p>회복 및 영양 공급 · 비타민 · 아미노산 · 종합영양 · 미량원소</p></article>
+    <article class="service"><div class="service-icon"><i class="fa-solid fa-droplet" aria-hidden="true"></i></div><h3>수액 · 영양 상담</h3><p>탈수 및 영양 상태를 평가하고 진료상 필요한 치료를 상담합니다.</p></article>
     <article class="service"><div class="service-icon"><i class="fa-solid fa-syringe" aria-hidden="true"></i></div><h3>예방 접종</h3><p>대상포진, 폐렴, A/B형 간염, 백일해, 파상풍, 자궁경부암, 독감 등</p></article>
-    <article class="service"><div class="service-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div><h3>비만 상담</h3><p>체중 관리와 식이 상담 · 위고비, 마운자로</p></article>
+    <article class="service"><div class="service-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></div><h3>비만 · 대사 상담</h3><p>체중·식사·생활습관 평가 및 약물치료 적합성 상담</p></article>
   </div>
 </div>
 </section>
@@ -298,10 +464,10 @@ footer{background:#142635;color:#9eafbc;text-align:center;padding:28px 20px;font
     <p class="section-desc">목표와 체질, 생활 패턴에 맞춰 개인화된 관리를 상담합니다.</p>
   </div>
   <div class="clinic-wrap">
-    <article class="clinic"><h3>체중 관리 패키지</h3><ul><li>상담 → 주사 선택 → 4주 추적</li><li>기초 대사 · 식습관 프로파일</li><li>위고비 · 마운자로 적정화</li><li>부작용 최소화 가이드</li></ul></article>
-    <article class="clinic"><h3>혈당 스파이크 관리</h3><ul><li>연속혈당측정(CGM) 모니터링</li><li>식후 혈당 급상승 패턴 분석</li><li>맞춤 식단 & 생활습관 가이드</li><li>대사 증후군 및 당뇨 예방</li></ul></article>
-    <article class="clinic"><h3>피로 회복 & 면역</h3><ul><li>단건 또는 4/8/12회 코스</li><li>비타민 · 아미노산 · 종합영양 · 미량원소</li><li>항산화 (백옥/신데렐라)</li><li>스트레스 관리</li></ul></article>
-    <article class="clinic"><h3>예방 접종 패키지</h3><ul><li>연령 · 직업군별 권장 스케줄</li><li>기업 및 단체 접종 협의</li></ul></article>
+    <article class="clinic"><h3>체중 관리 클리닉</h3><ul><li>병력·체중·생활습관 평가</li><li>식사 및 활동 계획 상담</li><li>약물치료 적합성·주의사항 안내</li><li>필요 시 정기 추적 관리</li></ul></article>
+    <article class="clinic"><h3>혈당 · 대사 관리</h3><ul><li>검사 결과와 혈당 패턴 평가</li><li>필요 시 연속혈당측정(CGM) 상담</li><li>식사·운동 등 생활습관 관리</li><li>당뇨병 및 대사질환 추적 관리</li></ul></article>
+    <article class="clinic"><h3>피로 · 영양 상태 평가</h3><ul><li>피로 증상과 병력 상담</li><li>필요한 혈액검사 여부 확인</li><li>영양 상태에 따른 치료 상담</li><li>수면·스트레스·생활습관 점검</li></ul></article>
+    <article class="clinic"><h3>성인 예방접종</h3><ul><li>연령·병력·접종 이력 확인</li><li>독감·대상포진·폐렴구균 등 상담</li><li>접종 간격 및 주의사항 안내</li><li>백신 재고는 방문 전 확인</li></ul></article>
   </div>
 </div>
 </section>
@@ -332,8 +498,11 @@ footer{background:#142635;color:#9eafbc;text-align:center;padding:28px 20px;font
       <p>서울 성동구 아차산로 92<br>에스타워 3층 303호</p>
       <p>대표전화</p>
       <div class="phone">02-466-1275</div>
-      <div class="actions" style="margin-top:24px">
-        <a class="btn" style="background:white;color:var(--navy)" href="tel:024661275">전화하기</a>
+      <p class="route-note">성수역 4번 출구에서 도보 약 2분</p>
+      <div class="actions" style="margin-top:24px;display:flex;gap:8px;flex-wrap:wrap">
+        <a class="btn" style="background:white;color:var(--navy)" href="tel:02-466-1275"><i class="fa-solid fa-phone"></i> 전화하기</a>
+        <a class="btn btn-naver" href="https://map.naver.com/p/search/%EC%84%B1%EC%88%98%ED%83%91%EB%82%B4%EA%B3%BC%EC%9D%98%EC%9B%90" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-map"></i> 네이버지도</a>
+        <a class="btn" style="background:#FEE500;color:#191600;border:1px solid #e5d000" href="https://map.kakao.com/link/search/성수탑내과의원" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-location-dot"></i> 카카오맵</a>
       </div>
     </div>
     <div class="map">
@@ -350,19 +519,53 @@ footer{background:#142635;color:#9eafbc;text-align:center;padding:28px 20px;font
     <h2 class="section-title">궁금한 점이 있으신가요?</h2>
     <p class="section-desc">진료 및 방문 전 궁금한 사항은 전화로 문의해주세요.</p>
   </div>
-  <a class="contact-phone" href="tel:024661275">02-466-1275</a>
+  <a class="contact-phone" href="tel:02-466-1275">02-466-1275</a>
   <p class="contact-note">성수탑내과의원 대표전화</p>
 </div>
 </section>
 </main>
 
 <footer>
+  <p>성수탑내과의원 · 서울 성동구 아차산로 92 에스타워 3층 303호 · 02-466-1275</p>
   <p>© 2026 성수탑내과의원. All Rights Reserved.</p>
 </footer>
 
 <div class="mobile-bar">
-  <a href="#location">📍 오시는 길</a>
-  <a href="tel:024661275">☎ 02-466-1275</a>
+  <a href="#location"><i class="fa-solid fa-location-dot"></i> 오시는 길</a>
+  <a href="tel:02-466-1275"><i class="fa-solid fa-phone"></i> 02-466-1275</a>
 </div>
+
+<script>
+// 오늘 영업 상태
+(function(){
+  const badge = document.getElementById('todayBadge');
+  const label = document.getElementById('todayLabel');
+  const hoursEl = document.getElementById('todayHours');
+  if(!badge) return;
+  const now = new Date();
+  const day = now.getDay();
+  const hm = now.getHours() + now.getMinutes()/60;
+  let status='closed', text='휴진', hoursText='휴진';
+  if([1,2,4,5].includes(day)){
+    hoursText='09:00 – 18:30';
+    if(hm < 9 || hm >= 18.5){ status='closed'; text='진료마감'; }
+    else if(hm >=13 && hm <14){ status='lunch'; text='점심시간'; }
+    else { status='open'; text='영업중'; }
+    label.textContent = '평일 진료 · 월 / 화 / 목 / 금';
+  } else if([3,6].includes(day)){
+    hoursText='09:00 – 13:00';
+    if(hm >=9 && hm <13){ status='open'; text='영업중'; }
+    else { status='closed'; text='진료마감'; }
+    label.textContent = (day===3?'수요일':'토요일')+' 진료';
+  } else {
+    hoursText='휴진'; status='closed'; text='휴진';
+    label.textContent = '일요일 · 공휴일';
+  }
+  hoursEl.textContent = hoursText;
+  badge.textContent = text;
+  badge.className = 'status-badge ' + (status==='open' ? 'badge-open' : status==='lunch' ? 'badge-lunch' : 'badge-closed');
+})();
+</script>
 </body>
+
 </html>
